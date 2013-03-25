@@ -15,26 +15,25 @@ public class UserRole implements Serializable{
 	private static final long serialVersionUID = -7212444196433639251L;
 
 	private int id;
-	private int userid;
-	private int roleid;
-	
+	private int userId;
+	private int roleId;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getUserid() {
-		return userid;
+	public int getUserId() {
+		return userId;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
-	public int getRoleid() {
-		return roleid;
+	public int getRoleId() {
+		return roleId;
 	}
-	public void setRoleid(int roleid) {
-		this.roleid = roleid;
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
 	}
 	
 }

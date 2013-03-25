@@ -14,7 +14,7 @@ public class User implements Serializable{
 
 	private static final long serialVersionUID = -7398308107630350186L;
 
-	private int uid;
+	private int userId;
 	private String userName;
 	private String loginName;
 	private String password;
@@ -25,18 +25,21 @@ public class User implements Serializable{
 	 * 用户类型,作为扩充点
 	 */
 	private String userType;
-	
+	/**
+	 * 用户所属的部门
+	 */
 	private Department department;
-	
+	/**
+	 * 这里我们使用用户查权限，没有权限查用户的道理
+	 */
 	private List<UserRole> userRole;
-	
-	public int getUid() {
-		return uid;
-	}
-	public void setUid(int uid) {
-		this.uid = uid;
-	}
 
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	public String getUserName() {
 		return userName;
 	}

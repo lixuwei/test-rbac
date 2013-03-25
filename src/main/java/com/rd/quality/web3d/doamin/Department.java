@@ -14,22 +14,24 @@ public class Department implements Serializable {
 	
 	private static final long serialVersionUID = 4149770253750788971L;
 	
-	private int departmentid;
-	private String departmentname;
+	private int departmentId;
+	private String departmentName;
 	private String departmentCode;
+	/**
+	 * 部门下的用户
+	 */
 	private List<User> users;
-	
-	public int getDepartmentid() {
-		return departmentid;
+	public int getDepartmentId() {
+		return departmentId;
 	}
-	public void setDepartmentid(int departmentid) {
-		this.departmentid = departmentid;
+	public void setDepartmentId(int departmentId) {
+		this.departmentId = departmentId;
 	}
-	public String getDepartmentname() {
-		return departmentname;
+	public String getDepartmentName() {
+		return departmentName;
 	}
-	public void setDepartmentname(String departmentname) {
-		this.departmentname = departmentname;
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 	public String getDepartmentCode() {
 		return departmentCode;
