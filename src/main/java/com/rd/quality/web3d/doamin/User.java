@@ -19,10 +19,11 @@ public class User implements Serializable{
 	private String loginName;
 	private String password;
 	private String email;
-	private String mobilphone;
+	private String cellphone;
 	
 	/**
 	 * 用户类型,作为扩充点
+	 * 监理 部门领导 普通用户
 	 */
 	private String userType;
 	/**
@@ -64,11 +65,12 @@ public class User implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getMobilphone() {
-		return mobilphone;
+	
+	public String getCellphone() {
+		return cellphone;
 	}
-	public void setMobilphone(String mobilphone) {
-		this.mobilphone = mobilphone;
+	public void setCellphone(String cellphone) {
+		this.cellphone = cellphone;
 	}
 	public String getUserType() {
 		return userType;
@@ -88,5 +90,4 @@ public class User implements Serializable{
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
-	
 }

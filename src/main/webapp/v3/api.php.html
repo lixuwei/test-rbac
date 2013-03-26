@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="zTree 是一个依靠 jQuery 实现的多功能 “树插件”。优异的性能、灵活的配置、多种功能的组合是 zTree 最大优点。专门适合项目开发，尤其是 树状菜单、树状数据的Web显示、权限管理等等。zTree 是开源免费的软件（MIT 许可证）。在开源的作用下，zTree 越来越完善，目前已经拥有了不少粉丝，并且今后还会推出更多的 zTree 扩展功能库，让 zTree 更加强大。" />
+		<meta name="keywords" content="jQuery, javascript, Tree, plugIn, 树, 插件, 树插件, Web, Web前端" />
+		<title>API 文档 [zTree --  jQuery 树插件]</title>
+		<link rel="stylesheet" href="css/common.css~2013031101.css" type="text/css">
+		<link rel="shortcut icon" href="favicon.ico">
+<link rel='stylesheet' href='css/zTreeStyle/zTreeStyleForApi.css~2013031101.css' type='text/css'>		
+		<script type="text/javascript" src="js/babyFirst.js~2013031101"></script>
+		<script type="text/javascript">
+		var lang = "cn";
+		</script>
+	</head>
+	<body>
+
+
+<!-- Copyright � 2005. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.0.3.1030</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  on  03/26/13 0:23:10.<br>
+<b>Address:</b> <a class="info" href="http://www.ztree.me/v3/api.php">http://www.ztree.me/v3/api.php</a><br>
+<b>Title:</b> API 文档 [zTree --  jQuery 树插件] &nbsp;&bull;&nbsp; <b>Size:</b> 9945<br></div>
+<!-- /Copyright � 2005. Spidersoft Ltd -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7819603-6']);
+  _gaq.push(['_setDomainName', 'ztree.me']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_setLocalRemoteServerMode']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><div id="header_wrap" class="header_wrap">
+	<div id="header" class="header round">
+		<div class="light-bulb" alt=""></div>
+		<div class="ieSuggest">浏览本网站建议您使用 Chrome、FireFox、Opera、IE9 等浏览器（只要不是 IE6 7 8 就行）, 速度会更快，画面会更炫！</div>
+		<div class="google_plus"><g:plusone></g:plusone></div>
+		<div class="header-text">
+			<h1><em>zTree v3.5.12 API 文档</em></h1><p></p>
+			<p>all.js = core + excheck + exedit ( 不包括 exhide ); 发现错误请及时通知，谢谢。</p>
+		</div>
+		<ul class="shortcuts">
+			<li><a href="main.php.html"  target="_self"><button class="ico home" onfocus="this.blur();"></button><span class="">首页</span></a></li>
+			<li><a href="demo.php.html"  target="_zTreeDemo"><button class="ico demo" onfocus="this.blur();"></button><span class="">Demo 演示</span></a></li>
+			<li><a href="api.php.html" onclick='return false;' target="_zTreeApi"><button class="ico api" onfocus="this.blur();"></button><span class="selected">API 文档</span></a></li>
+			<li><a href="faq.php.html"  target="_self"><button class="ico faq" onfocus="this.blur();"></button><span class="">常见问题</span></a></li>
+			<li><a href="donate.php.html"  target="_self"><button class="ico donate" onfocus="this.blur();"></button><span class="">捐助</span></a></li>
+			<li><a href="http://jquerytree.googlecode.com/files/JQuery zTree v3.5.12.zip"  target="_self"><button class="ico download" onfocus="this.blur();"></button><span class="">下载 zTree v3.5.12</span></a></li>
+		</ul>
+		<ul class="shortcuts language">
+			<li><a href="#"  onclick="chgLang('en'); return false;"><button class="ico en" onfocus="this.blur();" title="英文版"></button><span class=""></span></a></li>
+		</ul>
+	</div>
+</div>
+<div id="ad_120_600_right" class="ad" style="position:absolute; top:0px; display:none;">
+	<IFRAME ID="adIframe" Name="adIframe" class="adRight" FRAMEBORDER=0 SCROLLING=NO width=120 height=600 SRC="googleAD.html" style="display:none;"></IFRAME>
+	<div id="ad_120_600_qingyuan" class="adRight ad" style="display:none; top:0px; left:0px;">
+		<a href="http://www.tsingyuan.cn/r/mumA7r" target="_blank"><div class="ad_qingyuan" ></div></a>
+	</div>
+</div>
+<div id="ad_120_600_left" class="ad" style="top:0px; display:none;">
+	<div id="ad_120_600_wiz" class="adLeft ad" style="top:0px; left:120px;">
+		<a href="http://www.wiz.cn/i/ef16c35f" target="_blank"><div class="ad_wiz" ></div></a>
+	</div>
+	<div id="ad_120_600_qui" class="adLeft ad" style="top:0px; left:120px;">
+		<a href="http://www.quickui.net/" target="_blank"><div class="ad_qui" ></div></a>
+	</div>
+</div><div id="content_wrap" class="content_wrap">
+	<div id="content" class="content">
+		<div class="nav_section">
+			<ul>
+				<li class="first">注释：</li>
+				<li><button class="ico16 z_core" onfocus="this.blur();"></button><span>core 核心包</span></li>
+				<li><button class="ico16 z_check" onfocus="this.blur();"></button><span>excheck 扩展</span></li>
+				<li><button class="ico16 z_edit" onfocus="this.blur();"></button><span>exedit 扩展</span></li>
+				<li><button class="ico16 z_hide" onfocus="this.blur();"></button><span>exhide 扩展</span></li>
+				<li class="noline">
+					<button class="ico16 z_search" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button>
+					<input type="text" class="searchKey search" value="" style="">
+					<input type="text" class="searchResult search" value="" style="">
+					<button class="ico16 searchPrev disabled" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button><button class="ico16 searchNext disabled" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="contentBox" class="contentBox round clearfix">
+			<div id="apiContent" class="apiContent">
+				<div id="api_setting" class="api_setting left">
+					<ul class="api_content_title"><li>setting 配置详解</li></ul>
+					<ul id="settingTree" class="ztree"></ul>
+				</div>
+				<div id="api_function" class="api_function right">
+					<ul class="api_content_title"><li>zTree 方法详解</li></ul>
+					<ul id="functionTree" class="ztree"></ul>
+					<ul class="api_content_title"><li>treeNode 节点数据详解</li></ul>
+					<ul id="treenodeTree" class="ztree"></ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+<!-- overlayed -->
+<div id="overlayDiv" class="baby_overlay">
+	<div id="overlayContent" class="content round clearfix">
+		<div class="overlaySearch">
+			<button class="ico16 z_search" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button>
+			<input type="text" class="searchKey search" value=""><input type="text" class="searchResult search" value="">
+			<button class="ico16 searchPrev disabled" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button><button class="ico16 searchNext disabled" onfocus="this.blur();" title="Enter 以及 左、右键可以快速定位查找结果"></button>
+		</div>
+		<a id="overlayDivCloseBtn" class="close"></a>
+		<div id="overlayDetailDiv" class="details"></div>
+	</div>
+	<div id="overlayDivArrow" class="baby_overlay_arrow"></div>
+</div>
+<div id="footer_wrap" class="footer_wrap">
+	<div id="footer" class="footer">
+		<a href="main.php.html" style="display:inline;" title="zTree Home"><div class="footer-logo"></div></a>
+
+		<!-- Site Switcher -->
+		<div id="footer_mii" class="footer_mii">
+			<a href="javascript:void(0)" target="_blank">Copyright @2010 zTree  版权所有.</a>
+		</div>
+		<div id="footer_siteMap" class="footer_siteMap open">
+			<div class="footer_siteMap_header" title="站内导航">站内导航</div>
+			<ul id="footer_siteMap_ul" class="up" style="display: none;">
+				<li><a href="main.php#_zTreeInfo.html" class="zTreeInfoBtn">zTree 简介</a></li>
+				<li><a href="http://www.ztree.me/v3/main.php#_license" class="licenseBtn">zTree 授权协议</a></li>
+				<li><a href="donate.php.html" class="donateBtn">捐助 zTree</a></li>
+				<li><a href="demo.php.html">zTree v3.5 Demo 演示</a></li>
+				<li><a href="api.php.html">zTree v3.5 API 文档</a></li>
+				<li><a href="faq.php.html">zTree v3.x 常见问题</a></li>
+				<li><a href="http://www.ztree.me/hunter/index.html" target="_blank">zTree v2.6 回忆</a></li>
+				<li><a href="http://www.ztree.me/v3/main.php#_links" class="linksBtn">友情链接</a></li>
+			</ul>
+		</div>
+		<div id="footer_contact" class="footer_contact open">
+			<div class="footer_contact_header" title="快速联系">快速联系</div>
+			<ul id="footer_contact_ul" class="up" style="display: none; ">
+				<li><a href="http://code.google.com/p/jquerytree" target="_blank">zTree @ Google</a></li>
+				<li><a href="https://github.com/zTree/zTree_v3" target="_blank">zTree @ Github</a></li>
+				<li><a href="http://my.oschina.net/dyhunter" target="_blank">zTree @ 开源中国</a></li>
+				<li><a href="http://ztreeapi.iteye.com/" target="_blank">zTree @ ITeye</a></li>
+				<li><a href="http://tieba.baidu.com/f?kw=zTree" target="_blank">zTree 吧</a></li>
+				<li><a href="mailto:hunter.z@263.net">Email</a></li>
+				
+			</ul>
+		</div>
+		<div id="footer_download" class="footer_download open">
+			<div class="footer_download_header" title="快速下载">快速下载</div>
+			<ul id="footer_download_ul" class="up" style="display: none; ">
+				<li><a href="http://jquerytree.googlecode.com/files/JQuery zTree v3.5.12.zip">v3.5.12 下载</a></li>
+				<li><a href="http://jquerytree.googlecode.com/files/JQuery zTree v2.6.03.zip">v2.6.3 补丁下载</a></li>
+				<li><a href="http://jquerytree.googlecode.com/files/JQuery zTree v2.6.zip">v2.6.0 完整下载</a></li>
+				<li><a href="http://code.google.com/p/jquerytree/downloads/list" target="_blank">全部下载列表</a></li>
+			</ul>
+		</div>
+		<!-- [END] Site Switcher -->
+
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.6.2.min.js~2013031101"></script>
+<script type="text/javascript" src="js/babygo.js~2013031101"></script>
+<script type='text/javascript' src='js/jquery.ztree.core-3.5.js~2013031101'></script><script type='text/javascript' src='js/api.js~2013031101'></script>	</body>
+</html>

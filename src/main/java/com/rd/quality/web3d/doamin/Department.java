@@ -17,6 +17,7 @@ public class Department implements Serializable {
 	private int departmentId;
 	private String departmentName;
 	private String departmentCode;
+	private String departmentDescription;
 	/**
 	 * 部门下的用户
 	 */
@@ -45,4 +46,11 @@ public class Department implements Serializable {
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
+	public String getDepartmentDescription() {
+		return departmentDescription;
+	}
+	public void setDepartmentDescription(String departmentDescription) {
+		this.departmentDescription = departmentDescription;
+	}
+	
 }
