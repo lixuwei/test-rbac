@@ -1,4 +1,4 @@
-package com.rd.quality.web3d.doamin;
+package com.rd.quality.web3d.domain;
 
 import java.io.Serializable;
 import java.util.List;
@@ -89,5 +89,23 @@ public class User implements Serializable{
 	}
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+	public User(int userId, String userName, String loginName, String password,
+			String email, String cellphone, String userType,
+			Department department, List<UserRole> userRole) {
+		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.loginName = loginName;
+		this.password = password;
+		this.email = email;
+		this.cellphone = cellphone;
+		this.userType = userType;
+		this.department = department;
+		this.userRole = userRole;
+	}
+	
+	public User() {
+		
 	}
 }

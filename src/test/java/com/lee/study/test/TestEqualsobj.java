@@ -5,7 +5,7 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import com.rd.quality.web3d.doamin.Function;
+import com.rd.quality.web3d.domain.Function;
 
 /**
  * @description 比较两个对象相等 

@@ -1,4 +1,4 @@
-package com.rd.quality.web3d.doamin;
+package com.rd.quality.web3d.domain;
 
 import java.io.Serializable;
 import java.util.List;

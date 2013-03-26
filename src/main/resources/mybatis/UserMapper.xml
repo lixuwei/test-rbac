@@ -2,8 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.rd.quality.web3d.dao.UserDao">
 	
-
-	<insert id="insert" parameterType="com.rd.quality.web3d.domain.User">
-		insert into t_user (name)values (#{name})
+	<!-- 保存user -->
+	<insert id="save" parameterType="User">
+		insert into t_user 
+			(username,loginname,password,email,cellphone,userType,departmentid) 
+		values 
+			(#{userName},#{loginName},#{password},#{email},#{cellphone},#{userType},#{department.departmentId})
 	</insert>
+	
+	
 </mapper>
