@@ -28,7 +28,7 @@
 			<result column="userType" property="userType"/>
 		</collection>
 	</resultMap>
-	<!-- 查询出当前模块下的所有Department所拥有的Users -->
+	<!-- 查询出当前Department所拥有的Users -->
 	<select id="findDepartmentAndUserById" resultMap="DepartmentUser" parameterType="int">
 		select * from t_department t1 left join t_user t2 on (t1.departmentid=t2.departmentid) where t1.departmentid = #{departmentId}
 	</select>

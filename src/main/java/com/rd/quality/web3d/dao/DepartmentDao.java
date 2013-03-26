@@ -16,5 +16,18 @@ public interface DepartmentDao {
 	 */
 	int save(Department department);
 	
+	/**
+	 * 根据DepartmentId得到实体
+	 * @param departmentId
+	 * @return
+	 */
+	Department findById(int departmentId);
+	
+	/**
+	 * 查询出当前Department所拥有的Users 
+	 * @param departmentId
+	 * @return
+	 */
+	Department findDepartmentAndUserById(int departmentId);
 	
 }
