@@ -9,6 +9,17 @@
 		values 
 			(#{userName},#{loginName},#{password},#{email},#{cellphone},#{userType},#{department.departmentId})
 	</insert>
+	<!-- 根据id查询User -->
+	<select id="findById" parameterType="int" resultType="User">
+		select * from t_user where userid = #{userId}
+	</select>
 	
-	
+	<!-- 根据username查询user -->
+	<select id="findByUserName" parameterType="string" resultType="User">
+		select * from t_user where username = #{userName};
+	</select>
+	<!-- 根据loginname查询user -->
+	<select id="findByLoginName" parameterType="string" resultType="User">
+		select * from t_user where loginname = #{loginName};
+	</select>
 </mapper>

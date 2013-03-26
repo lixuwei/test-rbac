@@ -1,6 +1,7 @@
 package com.rd.quality.web3d.service;
 
 import com.rd.quality.web3d.domain.User;
+import com.rd.quality.web3d.exception.UserException;
 
 /**
  * @description 用户业务
@@ -15,6 +16,15 @@ public interface UserService {
 	 * @param user
 	 * @return
 	 */
-	int save(User user);
+	boolean save(User user) throws UserException;
 	
+	/**
+	 * 根据userId查询出user
+	 */
+	User findUserById(int userid) throws UserException;
+	
+	/**
+	 * 根据userName和loginName得到User
+	 */
+	User findUserByName(String name) throws UserException;
 }

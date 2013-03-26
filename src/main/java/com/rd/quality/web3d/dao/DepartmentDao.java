@@ -14,5 +14,7 @@ public interface DepartmentDao {
 	 * @param department
 	 * @return 
 	 */
-//	int save(Department department);
+	int save(Department department);
+	
+	
 }
