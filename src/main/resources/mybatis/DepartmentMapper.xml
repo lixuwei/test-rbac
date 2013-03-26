@@ -16,7 +16,7 @@
 	</select>
 	
 	<!-- 定义了一个包含一对多关系的resultType -->
-	<resultMap id="DepartmentUser" type="Department" autoMapping="true">
+	<resultMap id="DepartmentUser" type="Department">
 		<id column="departmentid" property="departmentId"/>
 		<collection property="users" ofType="User">
 			<id column="userid" property="userId"/>

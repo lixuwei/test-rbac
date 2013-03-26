@@ -17,15 +17,20 @@
 	<constant name="struts.tag.altSyntax" value="true"/>
 	<constant name="struts.dispatcher.parametersWorkaround" value="false"/>
 
-	<package name="user" namespace="/user" extends="struts-default">
+	<!-- 关于用户操作的Action -->
+	<package name="user" namespace="/user" extends="json-default">
 	 
 		<action name="user_*" class="com.rd.quality.web3d.web.action.UserAction" method="{1}"> 
-			<!-- <result name="success">/pages/user_list.jsp</result> -->
-			<result name="login">/success.jsp</result>
-			<result name="loginfails">/login.jsp</result> 
+			<result name="login" type="json"/> 
 		</action>
 		
 	</package> 
+	
+	<package name="forward" namespace="/forward" extends="struts-default">
+		<action name="to_*" class="com.rd.quality.web3d.web.action.ForwardAction" method="{1}">
+			<result name="forward2main" type="redirect">/success.jsp</result>
+		</action>
+	</package>
 	
 	<package name="schedule" namespace="/schedule" extends="struts-default">
 	

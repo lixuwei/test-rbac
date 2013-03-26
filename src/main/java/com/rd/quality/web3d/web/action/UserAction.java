@@ -26,7 +26,10 @@ public class UserAction {
 	
 	@Autowired
 	private UserService userService;
-	
+	/**
+	 * ajax请求的登录
+	 * @return
+	 */
 	public String login(){
 		User user = null;
 		
@@ -35,23 +38,20 @@ public class UserAction {
 		} catch (UserException e) {
 			logger.info(e.getMessage());
 			loginMsg = e.getMessage();
-			return "loginfails";
 		}
 		if(user==null){
-			loginMsg = "登录名不存在";
-			return "loginfails";
-		}
-		if(!user.getPassword().equals(password)){
+			loginMsg = "账号不存在";
+		}else if(!user.getPassword().equals(password)){
 			loginMsg = "密码不正确";
-			return "loginfails";
+		} else{		
+			/**
+			 * 将用户ID放入Session中
+			 */
+			ActionContext.getContext().getSession().put("userid", user.getUserId());
+			ActionContext.getContext().getSession().put("username", user.getUserName());
+			
+			loginMsg = "success";
 		}
-		
-		/**
-		 * 将用户ID放入Session中
-		 */
-		ActionContext.getContext().getSession().put("userid", user.getUserId());
-		ActionContext.getContext().getSession().put("username", user.getUserName());
-		
 		return "login";
 	}
 	
